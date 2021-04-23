@@ -134,3 +134,21 @@ ReactDOM.render(
   el3, 
   document.getElementById('converter')
 );
+
+
+
+function MyList(props) {
+  const arr = props.data;
+  const listItems = arr.map((val, index) =>
+    <li key={index}>{val}</li>
+  );
+  return <ul>{listItems}</ul>;
+}
+
+const arr = ["A", "B", "C"];
+const el4 = <MyList data={arr} />; 
+
+ReactDOM.render(
+  el4, 
+  document.getElementById('lists')
+);
